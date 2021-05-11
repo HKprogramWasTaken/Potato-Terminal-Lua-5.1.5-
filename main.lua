@@ -102,8 +102,10 @@ repeat
         print("Unlocked source code")
       end
     until TermSourceLockSubmit == PTerminalLock
-
   end
+ if input == "Term.home.github" then
+    print("https://github.com/HKprogramWasTaken/Potato-Terminal-Lua-5.1.5-") 
+ end
 until input == "Term.stop()" -- System ended
 
 
