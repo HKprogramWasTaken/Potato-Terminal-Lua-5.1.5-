@@ -36,21 +36,6 @@ end
 
 print("Potato.lua Terminal loaded")
 
-function PTerminalLogo()
-  print("__________       __          __          ")
-  print("\______   \_____/  |______ _/  |_  ____  ")
-  print(" |     ___/  _ \   __\__  \\   __\/  _ \ ")
-  print(" |    |  (  <_> )  |  / __ \|  | (  <_> )")
-  print(" |____|   \____/|__| (____  /__|  \____/ ")
-  print("                          \/             ")
-print("  __                       .__              .__   ")
-print("_/  |_  ___________  _____ |__| ____ _____  |  |  ")
-print("\   __\/ __ \_  __ \/     \|  |/    \\__  \ |  |  ")
-print(" |  | \  ___/|  | \/  Y Y  \  |   |  \/ __ \|  |__")
-print(" |__|  \___  >__|  |__|_|  /__|___|  (____  /____/")
-print("           \/            \/        \/     \/      ")
-end
-
 repeat
   print()
   local TermTextCurrent = "%Term%>"
