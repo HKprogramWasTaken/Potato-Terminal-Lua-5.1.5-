@@ -20,13 +20,13 @@ _/  |_  ___________  _____ |__| ____ _____  |  |
 ]]
 
 
-local socket = require("socket")
+local socket = require("socket") -- Download socket library if you have not done that yet, Or if it's already in your lua intercepter
 
 -- Variables [
 
 -- Logs
 local DvRRunLogVar = ""
-local PTerminalSourceLock = ""
+local PTerminalLock = "0410" -- Probably needed to check the source code to find the code? ;)
 local TermSourceLockStatus = false
 
 
@@ -79,7 +79,7 @@ repeat
     if TermSourceLockStatus == false then
       print("The source code is locked")
     elseif TermSourceLockStatus == true then
-      print("")
+      print("https://raw.githubusercontent.com/HKprogramWasTaken/Potato-Terminal-Lua-5.1.5-/main/main.lua")
     end
   end
   if input == "Term.storage.source?modify:restart()" then
@@ -94,9 +94,23 @@ repeat
     print("DvRRunLog Was modified")
   end
   if input == "Term.storage.source?modify:unlock()" then
-    print("")
+
+    -- Unlocking the source code link
+    repeat
+      print()
+      print("Please Type The Password")
+      local TermSourceLockSubmit = io.read()
+      if TermSourceLockSubmit ~= PTerminalLock then
+        print("Wrong Password")
+      elseif TermSourceLockSubmit == PTerminalLock then
+        print("Right Password")
+        TermSourceLockStatus = true
+        print("Unlocked source code")
+      end
+    until TermSourceLockSubmit == PTerminalLock
+
   end
-until input == "Term.stop()"
+until input == "Term.stop()" -- System ended
 
 
 print()
