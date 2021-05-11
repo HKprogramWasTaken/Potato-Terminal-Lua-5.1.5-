@@ -56,7 +56,7 @@ repeat
   end
   if input == "Term.home.date" then
     DvRRunLog("Term.home.date")
-    print(os.date('!%Y-%m-%d-%H:%M:%S GMT', curTime))
+    print(os.date('!%Y-%m-%d-%H:%M:%S GMT', curTime)) -- Shows Current GMT Time, And GMT Time only. Will get other timezones later
   end
   if input == "Term.wait" then
     DvRRunLog("Term.wait")
@@ -65,12 +65,6 @@ repeat
   end
   if input == "Term.RunCmd:Math.random()" then
     print(math.random());
-  end
-  if input == "Term.RunCmd?Create:Math.random()" then
-    print()
-    print("A new variable was created with content (math.random())")
-    local NewVariable1 = math.random()
-    print("Variable name: NewVariable1 with Math Content: "..NewVariable1)
   end
   if input == "Term.cons.clear" then
     print("\033[2J\033[0;0H");
